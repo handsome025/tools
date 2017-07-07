@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+      <link rel="stylesheet" type="text/css"
+          href="//g.alicdn.com/de/prismplayer/1.4.10/skins/default/index-min.css">
+    <script src="//g.alicdn.com/de/prismplayer/1.4.10/prism-min.js"></script>
+    <script>
+    function InitPlayer(){
+    var player = new prismplayer({
+        id: "J_prismPlayer",    // 容器id
+        source: "http://icatholiccloudcom.oss-cn-shanghai.aliyuncs.com/116/upload/medialib/201702061154542822922add299d150f4ea9307251976185c.mp4",  // 视频url 支持互联网可直接访问的视频地址
+        autoplay: true,       // 自动播放
+        width: "100%",        // 播放器宽度
+        height: "400px"      // 播放器高度
+    });
+    }
+    </script>
+<head>
+<title>自适应播放器示例</title>
+</head>
+<body> 
+<div id='J_prismPlayer' class='prism-player' style="
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    left: 50%;
+    margin-left: -320px;
+    margin-top: -200px;
+"></div>
+<script type="text/javascript">InitPlayer()</script></body>
+</html>

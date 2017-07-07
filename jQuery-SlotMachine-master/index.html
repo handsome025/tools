@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>jQuery Slot Machine</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="dist/jquery.slotmachine.css" type="text/css" media="screen" />
+
+		<!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="libs/jquery-2.1.1.min.js"></script>
+		
+		<script type="text/javascript" src="dist/jquery.slotmachine.js"></script>
+
+	</head>
+
+	<body>
+		<div class="header-line"></div>
+
+		<!-- Badge -->
+		<a href="https://github.com/josex2r/jQuery-SlotMachine"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+
+		<div id="randomize">
+			<div class="content container" style="text-align: center;max-width: 900px;">
+				<h1>Randomize your stuff!</h1>
+
+				<div class="row">
+					<div class="col-xs-4">
+						<div>
+							<div id="machine1" class="randomizeMachine">
+								<div><img src="img/slot1.png" /></div>
+								<div><img src="img/slot2.png" /></div>
+								<div><img src="img/slot3.png" /></div>
+								<div><img src="img/slot4.png" /></div>
+								<!-- <div><img src="img/slot5.png" /></div>
+								<div><img src="img/slot6.png" /></div> -->
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-4">
+						<div>
+							<div id="machine2" class="randomizeMachine">
+								<div><img src="img/slot1.png" /></div>
+								<div><img src="img/slot2.png" /></div>
+								<div><img src="img/slot3.png" /></div>
+								<div><img src="img/slot4.png" /></div>
+								<!-- <div><img src="img/slot5.png" /></div>
+								<div><img src="img/slot6.png" /></div> -->
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-4">
+						<div>
+							<div id="machine3" class="randomizeMachine">
+								<div><img src="img/slot1.png" /></div>
+								<div><img src="img/slot2.png" /></div>
+								<div><img src="img/slot3.png" /></div>
+								<div><img src="img/slot4.png" /></div>
+								<!-- <div><img src="img/slot5.png" /></div>
+								<div><img src="img/slot6.png" /></div> -->
+							</div>
+						</div>
+						<!--<div id="machine1Result" class="col-xs-4 machineResult">Index: 0</div>
+						<div id="machine2Result" class="col-xs-4 machineResult">Index: 1</div>
+						<div id="machine3Result" class="col-xs-4 machineResult">Index: 2</div>-->
+					</div>
+				</div>
+
+				<div>
+					<div class="btn-group btn-group-justified btn-group-randomize" role="group">
+						<div id="item"></div>
+						<div id="ranomizeButton" type="button" class="btn btn-danger btn-lg">Shuffle</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function(){
+				var machine1
+				var machine2
+				var machine3
+				function initMachine(num1,num2,num3){
+					machine1 = $("#machine1").slotMachine({
+						active	: one_num1,
+						delay	: 500,
+						randomize:function(activeElementIndex){
+							return num1
+						}
+					});
+
+					machine2 = $("#machine2").slotMachine({
+						active	: two_num1,
+						delay	: 500,
+						direction: 'down',
+						randomize:function(activeElementIndex){
+							return num2
+						}
+					});
+
+					machine3 = $("#machine3").slotMachine({
+						active	: three_num1,
+						delay	: 500,
+						randomize:function(activeElementIndex){
+							return num3
+						}
+					});
+				}
+
+				function randomEvent(){
+					Array.prototype.remove = function(val) {
+						var index = this.indexOf(val);
+						if (index > -1) {
+							this.splice(index, 1);
+						}
+					}
+					//未中奖随机生成数 包括3
+			        var num = [0,1,2,3]
+			        var no_win_num = [3]
+			        var no_win_num_random = []
+			        for (var i = 0; i < 2; i++){
+			            no_win_num.push(num[parseInt(Math.random()*4)])
+			        }
+			        for (var i = 0; i < 3; i++) {
+			            no_win_num_random.push(no_win_num[parseInt(Math.random()*3)])
+			        }
+			        var three_arr = no_win_num_random//未中奖号码随机数
+			        //中奖随机生成数 [0,1,2]
+			        // var three_arr = [0,1,2]//中奖号码随机数
+			        var one_num = three_arr[parseInt(Math.random()*3)]
+			        three_arr.remove(one_num)
+			        var two_num = three_arr[parseInt(Math.random()*2)]
+			        three_arr.remove(two_num)
+			        var three_num = parseInt(three_arr)
+
+			        console.info(one_num+"|"+two_num+"|"+three_num)
+			        initMachine(one_num,two_num,three_num)
+			        one_num1 = one_num
+				    two_num1 = one_num
+					three_num1 = one_num
+
+		        }
+				var one_num1 = 0
+				    two_num1 = 0
+					three_num1 = 0
+				function onComplete(active){
+
+					switch(this.element[0].id){
+						case 'machine1':
+							$("#machine1Result").text($("#item").text()+""+this.active);
+							break;
+						case 'machine2':
+							$("#machine2Result").text($("#item").text()+""+this.active);
+							break;
+						case 'machine3':
+							$("#machine3Result").text($("#item").text()+""+this.active);
+							break;
+					}
+				}
+
+				$("#ranomizeButton").click(function(){
+
+					randomEvent()
+
+					machine1.shuffle(5, onComplete);
+
+					// setTimeout(function(){
+						machine2.shuffle(5, onComplete);
+					// }, 500);
+
+					// setTimeout(function(){
+						machine3.shuffle(5, onComplete);
+					// }, 1000);
+
+				})
+			});
+		</script>
+	</body>
+</html>

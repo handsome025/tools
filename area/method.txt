@@ -1,0 +1,8 @@
+$('[data-toggle="distpicker"]').distpicker({
+    	province:'所在省份',
+    	city:'所在城市',
+    	district:'所在区县',
+    	autoSelect: false
+    })
+
+div>select 以id为选择器province city district

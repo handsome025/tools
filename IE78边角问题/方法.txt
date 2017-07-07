@@ -1,0 +1,4 @@
+.panel {
+            border-radius: 10px;
+            behavior: url(ie-css3.htc); 
+        }

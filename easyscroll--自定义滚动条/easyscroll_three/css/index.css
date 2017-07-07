@@ -1,0 +1,254 @@
+@charset "utf-8";
+body {
+    background-color: #FFFFFF;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+a, input:focus, textarea:focus {
+    outline: none;
+}
+
+p {
+	font-size: 12px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: #000;
+	white-space: pre-line;
+	margin-right: 4px;
+	margin-left: 4px;
+	margin-top: 0px;
+	float: left;
+	height: auto;
+	width: auto;
+}	
+
+.container5 {
+	width: 400px;
+	height: auto;
+	background-color: #E6E6E6;
+	margin-left: 12px;
+	float: left;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-top: 4px;
+}
+
+.container5 .div_scroll {
+	width: 100%;
+	height: 200px;
+	overflow: auto;
+	float: left;
+}			
+
+.container5 .scroll_container {
+    overflow: hidden;
+    position: relative;
+    background-color: #F8F8F8;
+}
+
+.container5 .scroll_absolute {
+    position: absolute;
+}
+
+.container5 .scroll_vertical_bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+    background: green;
+    margin: 0;
+    padding: 0;
+}
+
+.container5 .scroll_horizontal_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background: green;
+    margin: 0;
+    padding: 0;
+}
+
+.container5 .scroll_cap {
+    display: none;
+}
+
+.container5 .scroll_horizontal_bar .scroll_cap {
+    float: left;
+}
+
+.container5 .scroll_horizontal_bar .scroll_track, .scroll_horizontal_bar .scroll_drag {
+    float: left;
+    height: 100%;
+}
+
+.container5 .scroll_arrow {
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.container5 .scroll_vertical_bar .scroll_track {
+	position: relative;
+	background-color: #E8004B;
+}
+
+.container5 .scroll_horizontal_bar .scroll_track {
+	position: relative;
+	background-color: #C60;
+}
+
+.container5 .scroll_vertical_bar .scroll_drag {
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	background-color: #9D9C62;
+}
+
+.container5 .scroll_horizontal_bar .scroll_drag {
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	background-color: #675973;
+}
+
+.container5 .scroll_vertical_bar .scroll_arrow {
+	height: 16px;
+	background-color: #90C;
+}
+
+.container5 .scroll_horizontal_bar .scroll_arrow {
+	width: 16px;
+	float: left;
+	height: 100%;
+	background-color: #906;	
+}
+
+.container5 .scroll_corner {
+	float: left;
+	height: 100%;
+	background-color: #F2F200;
+}
+
+.container6 {
+	width: 400px;
+	height: auto;
+	background-color: #E6E6E6;
+	margin-left: 12px;
+	float: left;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-top: 4px;
+}
+
+.container6 .div_scroll {
+	width: 100%;
+	height: 200px;
+	overflow: auto;
+	float: left;
+}			
+
+.container6 .scroll_container {
+    overflow: hidden;
+    position: relative;
+    background-color: #F8F8F8;
+}
+
+.container6 .scroll_absolute {
+    position: absolute;
+}
+
+.container6 .scroll_vertical_bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+    background: green;
+    margin: 0;
+    padding: 0;
+}
+
+.container6 .scroll_horizontal_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background: green;
+    margin: 0;
+    padding: 0;
+}
+
+.container6 .scroll_cap {
+    display: none;
+}
+
+.container6 .scroll_horizontal_bar .scroll_cap {
+    float: left;
+}
+
+.container6 .scroll_horizontal_bar .scroll_track, .scroll_horizontal_bar .scroll_drag {
+    float: left;
+    height: 100%;
+}
+
+.container6 .scroll_arrow {
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.container6 .scroll_vertical_bar .scroll_track {
+	position: relative;
+	background-color: #FB0BD0;
+}
+
+.container6 .scroll_horizontal_bar .scroll_track {
+	position: relative;
+	background-color: #DFA315;
+}
+
+.container6 .scroll_vertical_bar .scroll_drag {
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	background-color: #97965E;
+}
+
+.container6 .scroll_horizontal_bar .scroll_drag {
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	background-color: #5F6392;
+}
+
+.container6 .scroll_vertical_bar .scroll_arrow {
+	height: 16px;
+	background-color: #5807C5;
+}
+
+.container6 .scroll_horizontal_bar .scroll_arrow {
+	width: 16px;
+	float: left;
+	height: 100%;
+	background-color: #B50CCD;
+}
+
+.container6 .scroll_corner {
+	float: left;
+	height: 100%;
+	background-color: #0474EE;
+}

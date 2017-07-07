@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="ddpanorama.css" />
+		<script type="text/javascript" src="jquery.1.7.1.min.js"> </script>
+		<script type="text/javascript" src="jquery.ba-outside-events.min.js"> </script>
+		<script type="text/javascript" src="imagesloaded.pkgd.min.js"> </script>
+		<script type="text/javascript" src="ddpanorama.min.js"> </script>
+		<script type="text/javascript" src="ddpanorama.fullscreen.js"> </script>
+	</head>
+	<body>
+		<img src="PanoSarek.jpg" alt="" />
+		<br />
+		<button id="original">original size</button>
+		<button id="size1">1024x768</button>
+		<button id="fullscreen">fullscreen</button>
+		<script>
+			//Note that you don't need to use ddpanorama.fullscreen.js in thr production code.
+			//The point is that ddpanorama supports changing its resolution after being created
+			
+			//end of code snippet
+			var sizeparameter_original={ratio:9/16};
+			var sizeparameter=sizeparameter_original;
+			function setFullScreen(flag, parameter)
+			{
+				if (flag != ddFullScreenEnabled())
+				{
+					if (flag)
+					{
+						ddLaunchFullScreen();
+					}
+					else
+					{
+						ddCancelFullScreen();
+					}
+				}
+				else
+				{
+					if (flag == false)
+					{
+						sizeparameter=parameter;
+					}
+					jQuery("img").ddpanorama(parameter);
+				}
+			}
+			
+			jQuery(function(){
+				   jQuery("img").ddpanorama(sizeparameter)
+				   .bind("ddinit", function(event)
+					{
+						 //event.canvas : canvas
+					})
+				   .bind("ddresize", function(event)
+				   {
+						 //event.canvas : canvas
+						if (ddFullScreenEnabled())
+					   {
+						   $(event.canvas).css("width", "100%");
+					   }
+					   else
+					   {
+						   $(event.canvas).css("width", "");
+					   }
+				   });
+				   
+				   ddBindFullScreenEvent(function (flag){
+										setFullScreen(flag, flag ? {height:$(document).height()} : sizeparameter);
+									});
+				   jQuery("#original").click(function(){
+										setFullScreen(false, sizeparameter_original);
+									});
+				   jQuery("#size1").click(function(){
+										setFullScreen(false, {width:1024, height:768});
+									});
+				   jQuery("#fullscreen").click(function(){
+										ddLaunchFullScreen();
+									});
+				   
+				   });
+		</script>
+	</body>
+</html>

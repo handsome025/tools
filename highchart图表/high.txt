@@ -1,0 +1,69 @@
+常用的文档说明：
+
+1.chart：
+renderTo 图表的页面显示容器
+defaultSeriesType 图表的显示类型（line,spline, scatter, splinearea bar,pie,area,column）
+margin 上下左右空隙
+events 事件
+click function(e) {}
+load function(e) {}
+
+2.xAxis：yAxis:
+属性：
+gridLineColor 网格颜色
+reversed 是否反向 true ,false
+gridLineWidth 网格粗细
+startOnTick 是否从坐标线开始画图区域
+endOnTick 是否从坐标线结束画图区域
+tickmarkPlacement 坐标值与坐标线标记的对齐方式on,between
+tickPosition 坐标线标记的样式 向内延伸还是向外延伸(insidel,outside)
+tickPixelInterval 决定着横坐标的密度
+tickColor 坐标线标记的颜色
+tickWidth 坐标线标记的宽度
+lineColor 基线颜色
+lineWidth 基线宽度
+max 固定坐标最大值
+min 固定坐标最小值
+plotlines 标线属性
+maxZoom
+minorGridLineColor
+minorGridLineWidth
+/minorTickColor
+title： 
+enabled： 是否显示
+text： 坐标名称
+Labels 坐标轴值显示类 默认：defaultLabelOptions
+formatter 格式化函数
+enabled 是否显示坐标轴的坐标值
+rotation 倾斜角度
+align 与坐标线的水平相对位置
+x 水平偏移量
+y 垂直偏移量
+style 
+font 字体样式 默认defaultFont
+color 颜色
+3.Tooltip 数据点的提示框
+enabled 鼠标经过时是否可动态呈现true,false
+formatter 格式化提示框的内容样式
+
+4.plotOptions 画各种图表的数据点的设置
+defaultOptions 默认设置
+属性
+Area类:
+lineWidth 线宽度
+fillColor area的填充颜色组
+marker{} 设置动态属性
+shadow 是否阴影 true,false
+states 设置状态？
+Line类
+dataLabels: 数据显示类
+enabled 是否直接显示点的数据true,false
+5.series
+name 该条曲线名称
+data[] 该条曲线的数据项
+addPoint([x,y],redraw,cover) 添加描点，redraw 是否重画，cover是否左移
+setData: function(data, redraw) 重新设置Data数组，redraw是否重画
+remove: function(redraw) 删除曲线
+redraw: function() 重画曲线
+marker ：
+enabled 是否显示描点

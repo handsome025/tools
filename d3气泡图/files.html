@@ -1,0 +1,241 @@
+
+<!-- <html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+	  
+	<title>权重篇 1.0 气泡图</title>
+	<style>
+	.bubble circle{
+		stroke: black;
+		stroke-width: 2px;
+	}
+
+	.bubble text{
+		fill: black;
+		font-size: 14px;
+		font-family: arial;
+		text-anchor: middle;
+	}
+
+	</style>
+</head> 
+<body>
+<script src="js/d3.js" charset="utf-8"></script>  
+<script>
+	var width  = 800;	//SVG绘制区域的宽度
+	var height = 800;	//SVG绘制区域的高度
+
+	console.log(d3)
+
+	// var svg = d3.select("body")			//选择<body>
+	// 		.append("svg")			//在<body>中添加<svg>
+	// 		.attr("width", width)	//设定<svg>的宽度属性
+	// 		.attr("height", height);
+	
+	// var pack = d3.layout.pack()
+	//     	.size([ width, height ])
+	//     	.sort(null)
+	//     	.value(function(d){
+	//     		return d.weight;
+	//     	})
+	// 	.padding(2);
+	
+	// d3.html("svg",function(error, root){
+	// 	console.log(root)
+	// 	var nodes = pack.nodes(root);
+		
+	// 	console.log(nodes);
+			
+	// 	var color = d3.scale.category20c();
+
+	// 	var bubbles = svg.selectAll(".bubble")
+	// 		.data(nodes.filter(function(d) { 
+	// 			return !d.children; 
+	// 		}))
+	// 		.enter()
+	// 		.append("g")
+	// 		.attr("class","bubble");
+
+	// 	bubbles.append("circle")
+	// 		.style("fill",function(d,i){
+	// 			return color(i);
+	// 		})
+	// 		.attr("cx",function(d){ return d.x; })
+	// 		.attr("cy",function(d){ return d.y; })
+	// 		.attr("r",function(d){ return d.r; });
+
+	// 	bubbles.append("text")
+	// 		.attr("x",function(d){ return d.x; })
+	// 		.attr("y",function(d){ return d.y; })
+	// 		.text(function(d){
+	// 			return d.name;
+	// 		});
+
+	// });
+
+
+		
+		
+</script><svg width="800" height="800"><g class="bubble"><circle cx="299.5092492088544" cy="376.26642189414036" r="75.23016398776772" style="fill: rgb(49, 130, 189);"></circle><text x="299.5092492088544" y="376.26642189414036">D3.js</text></g><g class="bubble"><circle cx="442.7233649173559" cy="376.26642189414036" r="66.01420098503311" style="fill: rgb(107, 174, 214);"></circle><text x="442.7233649173559" y="376.26642189414036">Echarts.js</text></g><g class="bubble"><circle cx="379.83804767035684" cy="261.43149558800815" r="62.942070998168596" style="fill: rgb(158, 202, 225);"></circle><text x="379.83804767035684" y="261.43149558800815">JavaScript</text></g><g class="bubble"><circle cx="254.83769383961064" cy="245.3615064912411" r="61.117274142368615" style="fill: rgb(198, 219, 239);"></circle><text x="254.83769383961064" y="245.3615064912411">C/C++</text></g><g class="bubble"><circle cx="167.81391262262676" cy="333.9818732127622" r="61.117274142368615" style="fill: rgb(230, 85, 13);"></circle><text x="167.81391262262676" y="333.9818732127622">Java</text></g><g class="bubble"><circle cx="189.18778981212608" cy="451.4370842046726" r="56.29709975860921" style="fill: rgb(253, 141, 60);"></circle><text x="189.18778981212608" y="451.4370842046726">PHP</text></g><g class="bubble"><circle cx="291.41221233542217" cy="515.7223383804171" r="62.49086753920313" style="fill: rgb(253, 174, 107);"></circle><text x="291.41221233542217" y="515.7223383804171">Ruby</text></g><g class="bubble"><circle cx="419.82083845753976" cy="506.5290376398119" r="64.27668028723394" style="fill: rgb(253, 208, 162);"></circle><text x="419.82083845753976" y="506.5290376398119">Python</text></g><g class="bubble"><circle cx="526.0785046761107" cy="459.62725794171604" r="49.90204537286649" style="fill: rgb(49, 163, 84);"></circle><text x="526.0785046761107" y="459.62725794171604">Windows</text></g><g class="bubble"><circle cx="579.2740358818161" cy="348.4576703944356" r="71.36960008479647" style="fill: rgb(116, 196, 118);"></circle><text x="579.2740358818161" y="348.4576703944356">Linux</text></g><g class="bubble"><circle cx="508.8810701997139" cy="224.330364357041" r="69.35878414146588" style="fill: rgb(161, 217, 155);"></circle><text x="508.8810701997139" y="224.330364357041">Unix</text></g><g class="bubble"><circle cx="421.8036087476965" cy="180.71685144959125" r="26.060493257710426" style="fill: rgb(199, 233, 192);"></circle><text x="421.8036087476965" y="180.71685144959125">Mac OS</text></g><g class="bubble"><circle cx="361.65314380558056" cy="163.72270232380373" r="34.474792101788644" style="fill: rgb(117, 107, 177);"></circle><text x="361.65314380558056" y="163.72270232380373">Ubuntu</text></g><g class="bubble"><circle cx="298.1329815706468" cy="166.21822389931984" r="27.12462137194609" style="fill: rgb(158, 154, 200);"></circle><text x="298.1329815706468" y="166.21822389931984">CentOS</text></g><g class="bubble"><circle cx="243.77033105427" cy="156.9036438065321" r="26.060493257710426" style="fill: rgb(188, 189, 220);"></circle><text x="243.77033105427" y="156.9036438065321">RedHat</text></g><g class="bubble"><circle cx="170.1475666843322" cy="174.1244813711814" r="47.579733389864316" style="fill: rgb(218, 218, 235);"></circle><text x="170.1475666843322" y="174.1244813711814">JSON</text></g><g class="bubble"><circle cx="92.26518773599798" cy="243.52587252424772" r="54.76838608195428" style="fill: rgb(99, 99, 99);"></circle><text x="92.26518773599798" y="243.52587252424772">Lua</text></g><g class="bubble"><circle cx="71.11742405882808" cy="331.39904302274465" r="33.64395212702106" style="fill: rgb(150, 150, 150);"></circle><text x="71.11742405882808" y="331.39904302274465">XML</text></g><g class="bubble"><circle cx="87.20248064064793" cy="415.3884122967913" r="49.90204537286649" style="fill: rgb(189, 189, 189);"></circle><text x="87.20248064064793" y="415.3884122967913">JQuery</text></g><g class="bubble"><circle cx="102.16395198422225" cy="516.6265680976244" r="50.465928190531585" style="fill: rgb(217, 217, 217);"></circle><text x="102.16395198422225" y="516.6265680976244">WebGL</text></g><g class="bubble"><circle cx="190.1552835357657" cy="568.8810931313925" r="49.90204537286649" style="fill: rgb(49, 130, 189);"></circle><text x="190.1552835357657" y="568.8810931313925">AngularJS</text></g><g class="bubble"><circle cx="265.0207032448268" cy="610.2104063131845" r="33.64395212702106" style="fill: rgb(107, 174, 214);"></circle><text x="265.0207032448268" y="610.2104063131845">ajax</text></g><g class="bubble"><circle cx="365.5793166122139" cy="627.6237919626016" r="66.44148182745934" style="fill: rgb(158, 202, 225);"></circle><text x="365.5793166122139" y="627.6237919626016">Node.js</text></g><g class="bubble"><circle cx="500.4825837353386" cy="612.9484980152693" r="67.28790425404212" style="fill: rgb(198, 219, 239);"></circle><text x="500.4825837353386" y="612.9484980152693">Hadoop</text></g><g class="bubble"><circle cx="621.656256920728" cy="539.2859868288006" r="72.5493428190261" style="fill: rgb(230, 85, 13);"></circle><text x="621.656256920728" y="539.2859868288006">Git</text></g><g class="bubble"><circle cx="664.4944355516278" cy="428.9229363005258" r="43.86634672539969" style="fill: rgb(253, 141, 60);"></circle><text x="664.4944355516278" y="428.9229363005258">Shell</text></g><g class="bubble"><circle cx="707.4169102214385" cy="337.36605142248874" r="55.28265451078004" style="fill: rgb(253, 174, 107);"></circle><text x="707.4169102214385" y="337.36605142248874">Go</text></g><g class="bubble"><circle cx="649.2837552714041" cy="263.36092048368573" r="36.855103007186685" style="fill: rgb(253, 208, 162);"></circle><text x="649.2837552714041" y="263.36092048368573">Swift</text></g><g class="bubble"><circle cx="601.4503014395432" cy="226.9692975166745" r="21.27830364221062" style="fill: rgb(49, 163, 84);"></circle><text x="601.4503014395432" y="226.9692975166745">HTTP</text></g><g class="bubble"><circle cx="589.5174354680305" cy="188.71731653160145" r="16.82197606351053" style="fill: rgb(116, 196, 118);"></circle><text x="589.5174354680305" y="188.71731653160145">TCP</text></g><g class="bubble"><circle cx="570.1484715154285" cy="145.95947736662006" r="28.1485498793046" style="fill: rgb(161, 217, 155);"></circle><text x="570.1484715154285" y="145.95947736662006">Android</text></g><g class="bubble"><circle cx="518.7430337755368" cy="129.72459290487126" r="23.789866694932154" style="fill: rgb(199, 233, 192);"></circle><text x="518.7430337755368" y="129.72459290487126">iOS</text></g></svg>
+	
+  
+  
+</body></html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+ <title>Path with Line</title>
+ <script type="text/javascript" src="js/d3.min.js"></script>
+</head>
+<body>
+<script>
+       var data = [20, 50, 80];
+       var r = 150;
+
+       var canvas = d3.select("body").append("svg")
+                    .attr("width", 1500)
+                    .attr("height", 1500);
+var color = d3.scale.ordinal()
+                   .range(["orange", "red", "green"]);
+var group = canvas.append("g")
+                   .attr("transform", "translate(200, 200)");
+var arc = d3.svg.arc()
+                .innerRadius(80)
+                .outerRadius(r);
+var pie = d3.layout.pie()
+                 .value ( function(d) { return d; });
+var arcs = group.selectAll(".arc")
+                 .data(pie(data))
+                 .enter()
+                 .append("g") 
+                 .attr("class", "arc");
+arcs.append("path")
+       .attr("d", arc)
+       .attr("fill", function(d) { return color(d.data)});
+arcs.append("text")
+       .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+       .attr("text-anchor", "middle")
+       .attr("font-size", "1.5em")
+       .text(function(d) { return d.data; });
+</script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <title>散点图和气泡图</title>
+ <style>
+  .container {
+  margin: 30px auto;
+  width: 600px;
+  height: 300px;
+  border: 1px solid #000;
+  }
+ </style>
+ </head>
+ <body>
+ <div class="container">
+  <svg width="100%" height="100%"></svg>
+ </div>
+ <script type="text/javascript" src="js/d3.min.js"></script>
+ <script>
+  window.onload = function() {
+  var width = 600, height = 300;
+  // SVG画布边缘与图表内容的距离
+  var padding = { top: 50, right: 50, bottom: 50, left: 50 };
+  // 创建一个分组用来组合要画的图表元素
+  var main = d3.select('.container svg').append('g')
+   // 给这个分组加上main类
+   .classed('main')
+   // 设置该分组的transform属性
+   .attr('transform', "translate(" + padding.top + ',' + padding.left + ')');
+  };
+ </script>
+ </body>
+</html> -->
+
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="utf-8">  
+        <title></title>  
+        <script src="js/d3.min.js" type="text/javascript" charset="utf-8"></script>  
+        <!-- <script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>   -->
+        <style type="text/css">  
+            text{  
+                font-size: 7px;  
+            }  
+        </style>  
+    </head>  
+    <body>  
+        <script type="text/javascript">  
+            var diameter = 300,                                 //设置宽高  
+                color = d3.scale.category20c();                 //设置不同颜色  
+            /*布局设置*/  
+            var bubble = d3.layout.pack()                       //初始化包图                         
+                .sort(null)                                     //后面的数减去前面的数排序，正负都变，null顺序不变  
+                .size([diameter, diameter])                     //设置范围  
+                .padding(1.5);                                  //设置间距  
+            /*获取并添加svg元素，并设置宽高*/  
+            var svg = d3.select("body").append("svg")             
+                .attr("width", diameter)  
+                .attr("height", diameter);  
+            /*假定后台传入的数据*/     
+            var data = {贾嫒: 20, 巩嫒: 20, 余嫒: 60, 梁安: 50, 彭安: 56};  
+            /*entries可以将如上类型的格式转换成{key:家园,value:343434}的数组*/  
+            var result = d3.entries(data);  
+            /*以下是字符串拼接*/  
+            var startString = "{\"name\": \"flare\",\"children\": [";                      //开头字符串  
+            result.forEach(function(dude){                                                 //遍历result并且拼接  
+                startString+="{\"name\":\""+dude.key+"\",\"size\":"+dude.value+"},";  
+            })  
+            /*去除最后一个末尾的逗号，这个逗号会影响后面JSON.parse的使用*/  
+            startString = startString.substring(0,startString.length-1);  
+            /*拼接尾部字符串*/  
+            startString+="]}";  
+            /*将拼接好的字符串转换成json对象*/  
+            var json2 = JSON.parse(startString);  
+            /*绘图部分*/  
+            console.log(classes(json2));  
+            var node = svg.selectAll(".node")  
+                          .data(bubble.nodes(classes(json2))                                                                 //绑定数据（配置结点）  
+                          .filter(function(d) { return !d.children; }))                                                      //数据过滤，满足条件返回自身（没孩子返回自身，有孩子不返回，这里目的是去除父节点）  
+                          .enter().append("g")  
+                          .attr("class", "node")  
+                          .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });                  //设定g移动  
+                  
+                node.append("title")  
+                    .text(function(d) { return d.className + ": " + (d.value); });             //设置移入时候显示数据   数据名和值  
+                  
+                node.append("circle")  
+                    .attr("r", function(d) { return d.r;})                                     //设置圆的半径  
+                    .style("fill", function(d) { return color(d.value); });              //为圆形涂色  
+                  
+                node.append("text")  
+                    .attr("dy", ".3em")  
+                    .style("text-anchor", "middle")                                            //设置文本对齐  
+                    .text(function(d) { return d.className.substring(0, d.r / 3); });          //根据半径的大小来截取对应长度字符串（很重要）  
+  
+                // Returns a flattened hierarchy containing all leaf nodes under the root.  
+                function classes(root) {  
+                    var classes = [];                                                                                        //存储结果的数组  
+                    /*自定义递归函数 
+                     * 
+                     * 第二个参数指传入的json对象 
+                     * */  
+                    function recurse(name, node) {  
+                        if (node.children)                                                                                   //如果有孩子结点 （这里的children不是自带的，是json里面有的）  
+                        {  
+                            node.children.forEach(function(child) {                                                          //将孩子结点中的每条数据  
+                                recurse(node.name, child); })  
+                        }  
+                        else {classes.push({ className: node.name, value: node.size})};                                     //如果自身是孩子结点的，将内容压入数组  
+                    }  
+                    recurse(null, root);  
+                    return {children: classes};                                                                             //返回所有的子节点  （包含在children中）                                                                            
+                }  
+        </script>  
+    </body>  
+</html>

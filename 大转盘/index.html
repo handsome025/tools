@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="html5,本地存储" />
+<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
+<title>幸运大转盘-jQuery+PHP实现的抽奖程序</title>
+<!-- <link rel="stylesheet" type="text/css" href="css/main.css" /> -->
+<style type="text/css">
+.demo{width:417px; height:417px; position:relative; margin:50px auto}
+#disk{width:417px; height:417px; background:url(disk.jpg) no-repeat}
+#start{width:163px; height:320px; position:absolute; top:46px; left:130px;}
+#start img{cursor:pointer}
+</style>
+<script type="text/javascript" src="jquery-2.1.4.js"></script>
+<script type="text/javascript" src="jQueryRotate.2.2.js"></script>
+<script type="text/javascript" src="jquery.easing.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#startbtn").rotate({
+		bind:{
+			click:function(){
+				var a = Math.floor(Math.random() * 360);
+				 $(this).rotate({
+					 	duration:3000,
+					 	angle: 0, 
+            			animateTo:1440+a,
+						easing: $.easing.easeOutSine,
+						callback: function(){
+							alert('中奖了！');
+						}
+				 });
+			}
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+   <div id="logo"><h1><a href="http://www.helloweba.com" title="返回helloweba首页">helloweba</a></h1></div>
+</div>
+
+<div id="main">
+   <h2 class="top_title"><a href="http://www.helloweba.com/view-blog-215.html">幸运大转盘-jQuery+PHP实现的抽奖程序</a></h2>
+   <div class="msg"></div>
+   <div class="demo">
+        <div id="disk"></div>
+        <div id="start"><img src="start.png" id="startbtn"></div>
+   </div>
+   <div class="ad_demo"></div><br/>
+</div>
+
+
+<div id="footer">
+    <p>Powered by helloweba.com  允许转载、修改和使用本站的DEMO，但请注明出处：<a href="http://www.helloweba.com">www.helloweba.com</a></p>
+</div>
+<p id="stat"><script type="text/javascript" src="http://js.tongji.linezing.com/1870888/tongji.js"></script></p>
+</body>
+</html>

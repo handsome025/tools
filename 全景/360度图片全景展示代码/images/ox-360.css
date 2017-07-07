@@ -1,0 +1,21 @@
+body{ padding:0px; margin:0px;}
+#J_View360{width:100%;margin:0 auto;height:690px;}
+.view360-go{width:990px;margin:0 auto;position:relative;}
+.view360-go img{display:block;left:355px;position:absolute;top:-16px;}
+.ox-control{width:250px;margin:0 auto;position:relative;}
+.ox-control .direction{position:absolute;left:78px;top:-150px;width:123px;height:83px;background:url(97zzw.png) no-repeat;*background:none;}
+.ox-control .direction .bg{position:absolute;top:0;left:0;width:123px;height:83px;*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='97zzw.png');z-index:-1;}
+.ox-control .direction .left{width:20px;display:inline;float:left;height:100px;cursor:pointer;text-indent:-1000px;overflow:hidden;}
+.ox-control .direction .right{width:20px;display:inline;float:right;height:100px;text-indent:-1000px;overflow:hidden;cursor:pointer;}
+.ox-control .direction .back{width:40px;height:40px;position:absolute;left:40px;top:20px;text-indent:-1000px;overflow:hidden;cursor:pointer;}.ox-control .views{position:absolute;top:-60px;width:230px;left:48px;height:100px;}
+.ox-control .views-bg,.ox-control .views-text{width:223px;height:44px;position:absolute;left:0;top:0;}
+.ox-control .views-bg{background:url(nav_bg.png) no-repeat;*background:none;* filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='nav_bg.png');z-index:1;}
+.ox-control .views-text{background:url(T1SqWdXd8oXXXXXXXX-223-44.png) no-repeat;*background:none;* filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='T1SqWdXd8oXXXXXXXX-223-44.png');z-index:3;}
+.ox-control .views-block{background:#3A0000;width:30px;height:26px;position:absolute;top:12px;left:52px;z-index:2;}
+.ox-control .views-trigger{top:12px;left:12px;z-index:5;position:absolute;}
+.ox-control .views-trigger a{display:inline;float:left;height:26px;width:30px;cursor:pointer;text-indent:-1000px;overflow:hidden;}
+.ox-control .views-trigger .views-1,.ox-control .views-trigger .views-5{width:41px;}
+.lv-content{background:url(loding.png) no-repeat center center;position:relative;}
+#content{width:100%;}
+img{vertical-align:middle;}
+/***97Õ¾³¤Íøwww.97zzw.com***/

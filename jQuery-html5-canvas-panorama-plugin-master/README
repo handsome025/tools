@@ -1,0 +1,158 @@
+jQuery-html5-canvas-panorama-plugin
+
+From June 11 2012 from Kei Kim(nicekei@gmail.com)
+
+Added a sample page users can directly view on the net
+
+Check following pages to see ddpanorama in action:
+
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.eventredraw2.html (NEW)
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.drawlabels.html (NEW)
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.event.html 
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.eventredraw.html 
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.dynamicsize.html 
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.dynamicinteractive.html 
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.pos.html
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.loop.html
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.basic.html
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.minspeed.html
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.size.html
+http://dl.dropbox.com/u/1791448/ddpanorama/sample.interactive.html
+
+<Version history>
+1.43 : Fixed a bug firing ddredraw event first when minSpeed exists(!=0)
+1.42 : Fixed scrollX to be always within (-width*0.5, width*0.5) for the looped
+       image, so that users can more conveniently draw stuffs using this 
+       parameter. 
+       Examples:
+       ex1) width:100, scrollX:90 -> -10
+       ex2) width:100, scrollX:-60 -> 40
+
+       Now ddpanorama uses imagesLoaded script to catch the image load event. 
+       As the load event has some drawbacks(https://api.jquery.com/load-event/), 
+       I decided to adapt other method. eg. Prior to this version, applying 
+       ddpanorama after the image is fully loaded was not working well, but it 
+       now just works
+
+       Added html element overlay example. Now you can see other elements 
+       positioned over canvas element. Other way of implementation might be 
+       drawing some texts on canvas and checking if the user clicks one of those 
+       texts’ bounding rectangles, but it would be definitely cumbersome/hard to 
+       predict the final result. 
+       Instead, I positioned already existing handy HTML elements on top of 
+       canvas, so that users can see/control the result beforehand.
+       
+1.41 : Delayed resizing/attachment after the panorama image is completely 
+       loaded
+1.40 : Now CSS is separated from codes. Note that to work as
+       before, you need to include "ddpanorama.css" as a stylesheet in your 
+       pages
+
+       Event prefix is changed from "ddpanorama_" to "dd". 
+       eg. ddpanorama_redraw -> ddredraw
+
+       "init" event is added which is called when the canvas is initialized 
+       - a good place to retrieve canvas and apply any additional properties 
+       to it
+
+       In case the interactive flag is turned off, the panning cursor didn't 
+       showup in Webkit browsers(up to 1.31). This is fixed in the current 
+       version.
+
+       Event demo(sample.event.html) code is rewritten. Now you can check 
+       all the event life cycles
+       ("startmove", "stopmove", "mousedown", "mouseup" events are added)
+
+       Fullscreen demo(sample.dynamicsize.html) code is refactored to show the 
+       demonstration clearly.
+       Note that the ugly bottom scroll bar is gone by CSS's blessing
+       (width:100%)
+
+       Redraw event demo(sample.eventredraw.html) shows how to draw something on 
+       top of the panorama
+
+       Refactored codes to support changing "defaults" which decides panoramas' 
+       default parameters
+
+
+1.31 : Size change is also supported
+1.30 : Support changing panorama parameters after it is created
+1.24 : Fixed a scroll variable becoming NaN issue when load event is fired later
+1.23 : Added startPos parameter. You can specify relative value
+       to (imageWidth-canvasWidth). So you specify 1.0, you get
+       the 100% scrolled image
+1.22 : Changed parameter names to reduce ambiguity
+           loopBounce -> bounce
+           loopBorderRate -> bounceEdge
+           loopBorderColor -> bounceEdgeColor
+       Refactored sample htmls. Made them being generated from parameters.
+1.21 : Added {loop:false} option to support not-wrapped image with a nice 
+       bounce effect
+       (due to a user request: thanks baloneysandwiches) 
+       Split sample html pages into multiple files to show what it is clearly 
+       in details
+1.12 : Added autoscroll feature(minSpeed parameter)
+       Added interactive flag(interactive parameter)
+       Fixed image to canvas converting method. Now use $.after to properly handle 
+       canvas insertion
+1.11 : Fixed scroll popping bug
+1.10 : Fixed event handling bug(mis typo?)
+       Support resized canvas drawing when height is specified
+       Fills the black color when canvas image is not loaded yet
+       Added .loaded parameter to event, users can draw something until the 
+       panorama image is fully loaded
+1.01 : Added event handling support
+1.00 : Started ddpanorama
+
+
+<Q & A>
+
+Q. Why do you re-create already existing jQuery panorama plugin?
+
+Yeah, it's another jQuery panorama plugin!
+
+But the implementation details are quite different. 
+
+As the repo name implies, it internally changes image into html5 canvas.
+Users can drag and view 360 degree panorama through the canvas.
+
+
+
+Q. Why canvas? Aren't image with css and javascript sufficient?
+
+Probably correct. I chose html5 canvas for two reasons:
+
+1. If we draw things on canvas, we can do pretty cool stuffs with it like applying cool effects on it.
+
+2. Drawing things on html5 canvas is fast enough on today's mobile device.
+
+(I want this plugin get spread :D So I added the last but not least important notes)
+
+*. It scrolls smoothly(maybe smoother than others)
+*. It scrolls like iOS scrollview
+
+
+
+Q. So what's the jQuery plugin name? jQuery-html5-canvas-panorama?
+
+No, that's too long. Because it's jQuery plugin, it should start with "j".
+
+But I prefer "dd", which means "dance dance". So the name is "ddpanorama"
+Strange enough, but this is named after an amateur photograph's blog I love
+I want to support that photos being displayed on the web
+I'll create a series of tools and plugins to support Let's dance! :D
+
+
+
+Q. What is jquery.ba-outside-events? Is it part of the plugin?
+
+No, absolutely not. It's a prerequisite jQuery plugin which handles outside events ex) outside mouse release event
+
+It's a simple and works good. The author's page is here(http://benalman.com/projects/jquery-outside-events-plugin/)
+
+Maybe later it can be included in jQuery itself! Check the new version if you have a time.
+
+I included "jquery.ba-outside-events.min.js" file in the repository which works currently with ddpanorama.
+
+
+

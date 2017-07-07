@@ -1,0 +1,25 @@
+ul,li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.item {
+	position: relative;
+	margin: 8px 0;
+}
+.item ul {
+	font-size: 15px;
+	position: absolute;
+	left:0;bottom:0;
+	color: #fff;
+	text-shadow: 1px 1px 5px #000;
+	border: 1px dotted rgba(255, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.3);
+}
+.item ul li {
+	margin: 10px 15px; 
+}
+.item div {  
+	max-width: 100%;
+	box-shadow: 1px 1px 5px #ccc;
+} 

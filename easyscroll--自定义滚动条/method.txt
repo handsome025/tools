@@ -1,0 +1,50 @@
+/* 自定义滚动条 */
+.list_info {
+    width: 100%;
+    overflow: auto;
+    float: left;
+    height: auto;
+}
+.scroll_container {
+    overflow: hidden;
+    position: relative;
+    background-color: #F8F8F8;
+}
+.scroll_absolute {
+    position: absolute;
+}
+.scroll_horizontal_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: green;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin: 0;
+}
+.scroll_horizontal_bar .scroll_cap {
+    float: left;
+}
+.scroll_cap {
+    display: none;
+}
+.scroll_horizontal_bar .scroll_track, .scroll_horizontal_bar .scroll_drag {
+    float: left;
+    height: 100%;
+}
+.scroll_track {
+    position: relative;
+    background-color: #dad9d6;
+    text-align: left;
+}
+.scroll_drag {
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background-color: #b9b9b9;
+}
